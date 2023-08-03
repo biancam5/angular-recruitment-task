@@ -1,3 +1,6 @@
+# Bianca Mainella
+# Angular-recruitment-task
+
 Goal of this task is to create a reusable list component with three different types of data and items. Data structure is available in endpoints:
 
 * `/users` - returns flat array of all users.
