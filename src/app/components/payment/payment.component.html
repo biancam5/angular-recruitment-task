@@ -1,0 +1,15 @@
+<mat-card class="user-payment">
+  <div *ngFor="let task of tasks">
+    <mat-card-header>
+      <mat-checkbox class="user-checkbox" [(ngModel)]="task.selected"></mat-checkbox>
+     <mat-card-subtitle class="title-card"> {{'Receiver : '}}</mat-card-subtitle>
+     <mat-card-subtitle> {{   task.receiver }}</mat-card-subtitle>
+     <br>
+     <mat-card-subtitle class="title-card"> {{'Status : '}}</mat-card-subtitle>
+     <mat-card-subtitle> {{ task.status }}</mat-card-subtitle>
+     </mat-card-header>
+     <hr>
+  </div>
+</mat-card>
+
+  

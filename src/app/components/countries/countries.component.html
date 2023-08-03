@@ -1,0 +1,10 @@
+<mat-card class="user-countries">
+  <div *ngFor="let task of tasks">
+    <mat-card-header>
+      <div class="user-avatar">
+        <img [src]="task.flag" alt="Country Avatar" />
+      </div>
+     <mat-card-subtitle class="title-card"> <mat-checkbox class="user-checkbox" [(ngModel)]="task.selected"></mat-checkbox> {{ task.name + ' ' + task.code }}</mat-card-subtitle>
+     </mat-card-header>
+  </div>
+</mat-card>

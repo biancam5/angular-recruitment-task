@@ -1,0 +1,14 @@
+.title-card{
+    color:black;
+    font-weight: 600;
+  }
+  
+  
+.user-payment {
+    padding: 50px;
+    background: #fff;
+    width: 300px;
+    margin: 20px;
+    border: 2px solid rgb(204, 132, 173)  ;
+    border-radius: 40px;  
+  }

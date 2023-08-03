@@ -1,27 +1,52 @@
-# AngularDataCrud
+Goal of this task is to create a reusable list component with three different types of data and items. Data structure is available in endpoints:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+* `/users` - returns flat array of all users.
 
-## Development server
+* `/payments` - returns flat array of all payments
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* `/countries` - returns flat array of all countries
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Application at main page should allow to navigate to three views `users` `payments` and `countries` and see three lists.
 
-## Build
+* Lists should be able to share common functionalities like selecting items, searching etc.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Lists should be able to share common styles.
 
-## Running unit tests
+* Lists should be able to display different items for different data types.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* It should be possible to easily add new data type and create another list.
 
-## Running end-to-end tests
+Bonus features:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* It should be possible to search item and filter list. In case of payments, we should be able to search by type, there's no need to search by specific payment fields.
 
-## Further help
+* Add item details view with single list item.
+    * `/users/:id` - returns single user
+    * `/countries/:id` - returns single country
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Handle empty dataset.
+
+* Show spinner when there is waiting period for API response.
+
+* Some example unit tests.
+
+
+What we pay attention to:
+
+* General structure of application, components, etc.
+
+* Strict usage of Typescript. Using setting `compilerOptions -> strict: true` in `tsconfig.json` is a plus.
+
+* Performance - component should run smoothly. Number of values to pick is around 10k, single node may have 1k children.
+
+* API usage - calls should be limited to minimum.
+
+* Using standalone architecture, avoiding ngModules
+
+
+We advise to use Angular Material as UI library to minimize effort in layout styling. It does not have to be pixel perfect, wireframe is just a suggestion.
+
+API with data should be run locally using json-server https://www.npmjs.com/package/json-server
+
+Please fork the project to your own bitbucket, github, or other git hosting account, and give us access to the repository holding your solution.

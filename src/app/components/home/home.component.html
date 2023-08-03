@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="user-payment-container">
+    <mat-card class="form-card">
+      <h1 class="main-title">Create User <mat-icon>favorite</mat-icon></h1>
+      <form (submit)="createUser()">
+      <mat-form-field>
+        <input matInput type="text" placeholder="First Name" [(ngModel)]="newUser.firstName" name="firstName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Last Name" [(ngModel)]="newUser.lastName" name="lastName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" [(ngModel)]="newUser.email" name="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="url" placeholder="Avatar URL" [(ngModel)]="newUser.avatarUrl" name="avatarUrl" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="accent" type="submit">Create User</button>
+    </form>
+    <div *ngIf="userCreated" class="success-message">
+      User created successfully! Go to the Users list.
+    </div>
+  </mat-card>
+
+  <mat-card class="form-card">
+    <h1 class="main-title">Create Payment <mat-icon>favorite</mat-icon></h1>
+    <form (submit)="createPayment()">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Status" [(ngModel)]="newPayment.status" name="status" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Receiver" [(ngModel)]="newPayment.receiver" name="receiver" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Internal Field A" [(ngModel)]="newPayment.internalFieldA" name="internalFieldA" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="XYZ Random Field" [(ngModel)]="newPayment.xYZRandomField" name="xYZRandomField" required>
+ 
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="accent" type="submit">Create Payment</button>
+    </form>
+    <div *ngIf="paymentCreated" class="success-message">
+      Payment created successfully! Go to the Payments list.
+    </div>
+  </mat-card>
+</div>
+
+<mat-card class="form-card">
+  <h1 class="main-title">Create Country <mat-icon>favorite</mat-icon></h1>
+  <form (submit)="createCountry()">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Name" [(ngModel)]="newCountry.name" name="name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="url" placeholder="Flag URL" [(ngModel)]="newCountry.flag" name="flag" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Code" [(ngModel)]="newCountry.code" name="code" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Some Weird Server Field Name With Count" [(ngModel)]="newCountry.someWeirdServerFieldNameWithCount" name="someWeirdServerFieldNameWithCount" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="accent" type="submit">Create Country</button>
+       </form>
+    <div *ngIf="countryCreated" class="success-message">
+      Country created successfully! Go to the Countries list.
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="Users">
+      <app-list [sectionName]="'users'" [tasks]="dataUser['users']"></app-list>
+    </mat-tab>
+    <mat-tab label="Countries">
+      <app-list [sectionName]="'countries'" [tasks]="dataCountries['countries']"></app-list>
+    </mat-tab>
+    <mat-tab label="Payments">
+      <app-list [sectionName]="'payments'" [tasks]="dataPayment['payments']"></app-list>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,12 @@
+<ng-container *ngIf="dataPay instanceof Payment">
+  <h2 mat-dialog-title>Payment Details</h2>
+  <mat-dialog-content>
+    <p><strong>Status:</strong> {{ dataPay.status }}</p>
+    <p><strong>Receiver:</strong> {{ dataPay.receiver }}</p>
+    <p><strong>Internal Field A:</strong> {{ dataPay.internalFieldA }}</p>
+    <p><strong>XYZ Random Field:</strong> {{ dataPay.xYZRandomField }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+  </ng-container>

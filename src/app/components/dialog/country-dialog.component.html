@@ -1,0 +1,12 @@
+<ng-container *ngIf="dataCountry instanceof Country">
+  <h2 mat-dialog-title>Country Details</h2>
+  <mat-dialog-content>
+    <p><strong>Name:</strong> {{ dataCountry.name }}</p>
+    <p><strong>Flag URL:</strong> {{ dataCountry.flag }}</p>
+    <p><strong>Code:</strong> {{ dataCountry.code }}</p>
+    <p><strong>Some Weird Server Field Name With Count:</strong> {{ dataCountry.someWeirdServerFieldNameWithCount }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</ng-container>
